@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:padding="12dp"
+    tools:context=".PanduanActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_marginTop="12dp"
+                android:id="@+id/point1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_chevron_right_black_24dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv1"
+                android:fontFamily="@font/asap"
+                android:textColor="#000"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:layout_marginTop="12dp"
+                android:layout_toRightOf="@id/point1"
+                android:text="MENU UTAMA"/>
+
+            <TextView
+                android:layout_below="@id/tv1"
+                android:id="@+id/tv2"
+                android:layout_marginTop="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/asap"
+                android:textColor="#000"
+                android:layout_toRightOf="@id/point1"
+                android:text="Pada halaman beranda terdapat beberapa menu yaitu :"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv3"
+                android:layout_toRightOf="@id/point1"
+                android:textColor="#000"
+                android:layout_marginTop="12dp"
+                android:layout_below="@id/tv2"
+                android:textStyle="bold"
+                android:fontFamily="@font/asap"
+                android:text="1."/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv4"
+                android:fontFamily="@font/asap"
+                android:layout_below="@id/tv2"
+                android:text=" Highligh Ombudsman"
+                android:textColor="#000"
+                android:layout_toRightOf="@id/tv3"
+                android:layout_marginTop="12dp"
+                android:textStyle="bold"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/image1"
+                android:layout_below="@id/tv3"
+                android:src="@drawable/highlight"
+                android:layout_toRightOf="@id/point1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv5"
+                android:layout_below="@id/image1"
+                android:textColor="#000"
+                android:fontFamily="@font/asap"
+                android:layout_toRightOf="@id/tv3"
+                android:text="Berisi tentang pengertian dan video menarik tentang Ombudsman Republik Indonesia"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv6"
+                android:layout_below="@id/tv5"
+                android:text="2. Pilih Layanan"
+                android:layout_marginTop="12dp"
+                android:layout_toRightOf="@id/point1"
+                android:fontFamily="@font/asap"
+                android:textStyle="bold"
+                android:textColor="#000"
+                />
+
+            <TextView
+                android:layout_marginTop="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv7"
+                android:layout_below="@id/tv6"
+                android:fontFamily="@font/asap"
+                android:textColor="#000"
+                android:layout_toRightOf="@id/tv3"
+                android:text="Pada menu ini ada 5 layanan yang di berikan, yaitu :"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv8"
+                android:layout_below="@id/tv7"
+                android:text="a. "
+                android:fontFamily="@font/asap"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:layout_toRightOf="@id/tv3"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv9"
+                android:layout_below="@id/tv7"
+                android:text="Panduan Aplikasi"
+                android:layout_toRightOf="@id/tv8"
+                android:fontFamily="@font/asap"
+                android:textStyle="bold"
+                android:textColor="#000"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/image2"
+                android:layout_below="@id/tv8"
+                android:src="@drawable/pengaduan"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@id/point1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv10"
+                android:layout_below="@id/image2"
+                android:textColor="#000"
+                android:fontFamily="@font/asap"
+                android:text="Berisi tentang cara smart menggunakan aplikasi Ombudsman"
+                android:layout_toRightOf="@id/tv8"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv11"
+                android:layout_below="@id/tv10"
+                android:layout_toRightOf="@id/tv3"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:text="b. Hubungi Ombudsman"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/asap"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/telponombudsman"
+                android:layout_below="@id/tv11"
+                android:id="@+id/image3"
+                android:layout_toRightOf="@id/point1"
+                android:layout_marginTop="4dp"/>
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv12"
+                android:layout_below="@id/image3"
+                android:textColor="#000"
+                android:fontFamily="@font/asap"
+                android:layout_toRightOf="@id/tv8"
+                android:layout_marginTop="4dp"
+                android:text="Kamu bisa hubungi kami melalui call center atau Whatsapp pengaduan"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv13"
+                android:layout_below="@id/tv12"
+                android:layout_toRightOf="@id/tv3"
+                android:fontFamily="@font/asap"
+                android:textColor="#000"
+                android:text="c. Lacak aduan"
+                android:layout_marginTop="12dp"
+                android:textStyle="bold"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv13"
+                android:id="@id/image4"
+                android:src="@drawable/lacak"
+                android:layout_toRightOf="@id/point1"
+                android:layout_marginTop="4dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv14"
+                android:layout_below="@id/image4"
+                android:fontFamily="@font/asap"
+                android:textColor="#000"
+                android:layout_toRightOf="@id/tv8"
+                android:layout_marginTop="4dp"
+                android:text="Kamu bisa melacak status aduan kamu, tetapi sebelumnya kamu harus registrasi atau login dan akun kamu sudah terverifikasi"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv15"
+                android:layout_below="@id/tv14"
+                android:text="d. Media"
+                android:textColor="#000"
+                android:fontFamily="@font/asap"
+                android:layout_marginTop="12dp"
+                android:textStyle="bold"
+                android:layout_toRightOf="@id/tv3"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/image5"
+                android:layout_below="@id/tv15"
+                android:src="@drawable/mediaombudaman"
+                android:layout_toRightOf="@id/point1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv16"
+                android:layout_below="@id/image5"
+                android:fontFamily="@font/asap"
+                android:textColor="#000"
+                android:text="Kamu akan mendapatkan informasi menarik tentang Ombudsman dan Pelayanan Publik melalui media kami"
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@id/tv8"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv17"
+                android:layout_below="@id/tv16"
+                android:textColor="#000"
+                android:fontFamily="@font/asap"
+                android:layout_toRightOf="@id/tv3"
+                android:text="e. Profil Ombudsman"
+                android:textStyle="bold"
+                android:layout_marginTop="12dp"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/profilmmbudsman"
+                android:layout_toRightOf="@id/point1"
+                android:layout_below="@id/tv17"
+                android:id="@+id/image6"
+                android:layout_marginTop="4dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv18"
+                android:layout_below="@id/image6"
+                android:text="Berisi tentang profil Ombudsman RI Perwakilan Provinsi Lampung yang patut kamu ketahui"
+                android:textColor="#000"
+                android:fontFamily="@font/asap"
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@id/tv8"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv19"
+                android:layout_below="@id/tv18"
+                android:textColor="#000"
+                android:fontFamily="@font/asap"
+                android:textStyle="bold"
+                android:layout_toRightOf="@id/point1"
+                android:text="3. Berita Ombudsman"
+                android:layout_marginTop="12dp"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/image7"
+                android:layout_below="@id/tv19"
+                android:src="@drawable/beritammbudsman"
+                android:layout_toRightOf="@id/point1"
+                android:layout_marginTop="4dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv20"
+                android:layout_below="@id/image7"
+                android:textColor="#000"
+                android:fontFamily="@font/asap"
+                android:layout_marginTop="4dp"
+                android:text="Berisi berita dan artikel menarik yang di upload setiap hari"
+                android:layout_toRightOf="@id/tv3"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv21"
+                android:textColor="#000"
+                android:text="4. Kantor Ombudsman"
+                android:fontFamily="@font/asap"
+                android:layout_toRightOf="@id/point1"
+                android:layout_below="@id/tv20"
+                android:layout_marginTop="12dp"
+                android:textStyle="bold"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/image8"
+                android:src="@drawable/alamatkantor"
+                android:layout_below="@id/tv21"
+                android:layout_toRightOf="@id/point1"
+                android:layout_marginTop="4dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv22"
+                android:layout_below="@id/image8"
+                android:textColor="#000"
+                android:fontFamily="@font/asap"
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@id/tv3"
+                android:text="Apabila kamu klik maka kamu akan di bawa ke alamat Kantor Ombudsman RI Perwakilan Provinsi Lampung melalui Aplikasi maps yang sudah terinstal di smartphone anda"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_chevron_right_black_24dp"
+                android:layout_below="@id/tv22"
+                android:id="@+id/image9"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:layout_marginTop="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:fontFamily="@font/asap"
+                android:textSize="18dp"
+                android:text="VERIFIKASI AKUN"
+                android:layout_below="@id/tv22"
+                android:id="@+id/tv23"
+                android:textStyle="bold"
+                android:layout_toRightOf="@id/image9"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv24"
+                android:layout_below="@id/tv23"
+                android:layout_toRightOf="@id/image9"
+                android:textColor="#000"
+                android:fontFamily="@font/asap"
+                android:layout_marginTop="12dp"
+                android:text="Sebelum melakukan verifikasi akun, anda harus registrasi terlebih dahulu"/>
+
+            <ImageView
+                android:id="@+id/image10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv24"
+                android:layout_margin="20dp"
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@id/point1"
+                android:src="@drawable/formregistrasi" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv25"
+                android:layout_below="@id/image10"
+                android:textColor="#000"
+                android:layout_toRightOf="@id/point1"
+                android:text="@string/verifikasi_akun"
+                android:fontFamily="@font/asap"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/image11"
+                android:src="@drawable/verifikasiakun"
+                android:layout_below="@id/tv25"
+                android:layout_toRightOf="@id/point1"
+                android:layout_margin="20dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_chevron_right_black_24dp"
+                android:id="@+id/point2"
+                android:layout_below="@+id/image11"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv26"
+                android:layout_below="@id/image11"
+                android:layout_toRightOf="@id/point2"
+                android:textColor="#000"
+                android:fontFamily="@font/asap"
+                android:text="BUAT ADUAN"
+                android:textStyle="bold"
+                android:textSize="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv27"
+                android:layout_below="@id/point2"
+                android:textColor="#000"
+                android:fontFamily="@font/asap"
+                android:layout_toRightOf="@id/point2"
+                android:layout_marginTop="12dp"
+                android:text="@string/buat_aduan"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/image12"
+                android:layout_below="@id/tv27"
+                android:src="@drawable/kirimaduan"
+                android:layout_margin="20dp"
+                android:layout_toRightOf="@id/point2"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv28"
+                android:layout_below="@+id/image12"
+                android:textColor="#000"
+                android:fontFamily="@font/asap"
+                android:layout_toRightOf="@id/point2"
+                android:text="Silahkan pilih aplikasi email anda, jika sudah maka klik tombol kirim pada aplikasi email anda."/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/image13"
+                android:layout_below="@id/tv28"
+                android:layout_margin="20dp"
+                android:layout_toRightOf="@+id/point2"
+                android:src="@drawable/pilihemail"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/image14"
+                android:layout_below="@id/image13"
+                android:layout_margin="20dp"
+                android:layout_toRightOf="@+id/point2"
+                android:src="@drawable/kirimemail"
+                />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

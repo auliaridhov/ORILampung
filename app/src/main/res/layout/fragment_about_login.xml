@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimary"
+    android:layout_height="match_parent"
+    tools:context=".AboutLoginFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/logo1"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_marginTop="22dp"
+            android:src="@drawable/logo"/>
+
+        <TextView
+            android:id="@+id/nama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Akun Anda"
+            android:textColor="#FFFF"
+            android:textSize="32dp"
+            android:layout_marginTop="58dp"
+            android:fontFamily="@font/asap"
+            android:layout_centerHorizontal="true"
+            />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card1"
+            android:layout_below="@id/nama"
+            android:layout_width="match_parent"
+            android:layout_marginRight="20dp"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="22dp"
+            android:backgroundTint="#ffffff">
+
+            <ScrollView
+                android:fillViewport="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textIdentitas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="24dp"
+                    android:textSize="16dp"
+                    android:text="Nomor Identitas"/>
+
+                <TextView
+                    android:layout_below="@id/textIdentitas"
+                    android:id="@+id/noIdentitas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="xxxxxxxxxxxxxx"
+                    android:fontFamily="@font/asap"
+                    android:textSize="14dp"
+                    android:layout_centerHorizontal="true"/>
+
+
+                <Button
+                    android:id="@+id/logout"
+                    android:layout_below="@id/noIdentitas"
+                    android:layout_width="160dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="keluar"
+                    android:textColor="#FFF"
+                    android:layout_marginBottom="12dp"
+                    android:fontFamily="@font/asap"
+                    android:background="@drawable/round_border_blue"/>
+
+                <TextView
+                    android:padding="20dp"
+                    android:gravity="center"
+                    android:id="@+id/verif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Akun anda belum terverifikasi, silahkan unggah bukti identitas berupa KTP atau SIM sesuai dengan nomor identitas saat melakukan registrasi"
+                    android:textSize="10dp"
+                    android:fontFamily="@font/asap"
+                    android:layout_below="@id/logout"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="#ec0505"/>
+
+                <LinearLayout
+                    android:layout_marginTop="4dp"
+                    android:id="@+id/layout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_below="@id/tvIdentitas"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/ambilgambar"
+                        android:layout_width="100dp"
+                        android:textSize="10dp"
+                        android:layout_toRightOf="@+id/upload"
+                        android:layout_height="wrap_content"
+                        android:text="ambil gambar"
+                        android:textColor="@color/colorPrimary"
+                        android:fontFamily="@font/asap"
+                        android:background="@drawable/round_borders"/>
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/tvIdentitas"
+                    android:layout_marginTop="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/gambarIdentitas"
+                    android:textSize="6dp"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_centerHorizontal="true"
+                    android:text="*bukti identitas harus berupa foto bukan scan gambar"/>
+
+                <ImageView
+                    android:id="@+id/gambarIdentitas"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/verif"
+                    android:layout_marginBottom="8dp"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/placeholder"/>
+
+                <Button
+                    android:layout_marginTop="6dp"
+                    android:layout_below="@id/layout1"
+                    android:id="@+id/upload"
+                    android:layout_width="100dp"
+                    android:textSize="10dp"
+                    android:layout_height="wrap_content"
+                    android:text="unggah"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="#fff"
+                    android:fontFamily="@font/asap"
+                    android:background="@drawable/round_border_blue"/>
+
+                <TextView
+                    android:id="@+id/tvUnggah"
+                    android:layout_marginTop="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/upload"
+                    android:textSize="6dp"
+                    android:textColor="#FF0000"
+                    android:layout_centerHorizontal="true"
+                    android:text="*jika ingin mengganti gambar tekan tombol ambil gambar"/>
+
+
+            </RelativeLayout>
+
+            </ScrollView>
+
+        </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutFragment"
+    android:background="@color/colorPrimary">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_marginTop="22dp"
+            android:id="@+id/logo1"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:src="@drawable/logo"
+            />
+
+        <TextView
+            android:id="@+id/nama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Akun Saya"
+            android:textColor="#FFFF"
+            android:textSize="32dp"
+            android:layout_marginTop="58dp"
+            app:fontFamily="@font/asap"
+            android:layout_centerHorizontal="true"
+            />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card1"
+            android:layout_below="@id/nama"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="22dp"
+            android:backgroundTint="#ffffff">
+
+
+            <RelativeLayout
+                android:layout_below="@id/text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Anda Belum Masuk, Silahkan Masuk atau Registrasi!"
+                    android:fontFamily="@font/asap"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginBottom="32dp"
+                    android:layout_centerHorizontal="true"/>
+
+                <Button
+                    android:id="@+id/login"
+                    android:layout_below="@id/text1"
+                    android:layout_width="310dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Masuk"
+                    android:textColor="#FFF"
+                    android:layout_marginBottom="12dp"
+                    android:fontFamily="@font/asap"
+                    android:background="@drawable/round_border_blue"/>
+
+                <Button
+                    android:id="@+id/regis"
+                    android:layout_below="@id/login"
+                    android:layout_width="310dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Registrasi"
+                    android:fontFamily="@font/asap"
+                    android:textColor="#fff"
+                    android:background="@drawable/round_border_orange"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="8dp"
+                    android:layout_marginTop="22dp"
+                    android:layout_marginBottom="12dp"
+                    android:layout_alignParentBottom="true"
+                    android:fontFamily="@font/asap"
+                    android:text="© Ombudsman Perwakilan Lampung - 2019"/>
+
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+
+
+</FrameLayout>

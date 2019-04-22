@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "780052434276",
+    "firebase_url": "https://ombudsman-ri-lampung.firebaseio.com",
+    "project_id": "ombudsman-ri-lampung",
+    "storage_bucket": "ombudsman-ri-lampung.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:780052434276:android:bbc1cbce24e087da",
+        "android_client_info": {
+          "package_name": "com.arba.orilampung"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "780052434276-abcpdo82lu11rtahlvg1v3ka9s638i9i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.arba.orilampung",
+            "certificate_hash": "799d6724896973df966d36472e73e089757af7fe"
+          }
+        },
+        {
+          "client_id": "780052434276-ug33572cpia2ko6np7tku0f5ljh3kr7e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.arba.orilampung",
+            "certificate_hash": "de28d843e671fc80d0842fbd327a89d6fece7f2e"
+          }
+        },
+        {
+          "client_id": "780052434276-4trkmuk2e0h58lqccrnp6r6gvl9e078q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgPf376dMMxj_VfukVkR-MazQSJOPF5OI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "780052434276-4trkmuk2e0h58lqccrnp6r6gvl9e078q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

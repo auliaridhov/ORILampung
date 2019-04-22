@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content"
+        >
+
+        <RelativeLayout
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_toRightOf="@id/namaPelapor"
+                android:fontFamily="@font/asap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" (Nama Pelapor)"/>
+
+            <TextView
+                android:fontFamily="@font/asap"
+                android:id="@+id/namaPelapor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="X"/>
+
+            <TextView
+                android:layout_toRightOf="@id/instansiTerlapor"
+                android:layout_below="@id/namaPelapor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" (Instansi Terlapor)"/>
+
+            <TextView
+                android:fontFamily="@font/asap"
+                android:layout_below="@id/namaPelapor"
+                android:id="@+id/instansiTerlapor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="X"/>
+
+            <TextView
+                android:id="@+id/statusaduan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="STATUS ADUAN"
+                android:fontFamily="@font/amiko"
+                android:textStyle="bold"
+                android:layout_below="@id/instansiTerlapor"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:textColor="#EE1212"
+                />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+
+

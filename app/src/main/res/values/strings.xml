@@ -1,0 +1,108 @@
+<resources>
+    <string name="app_name">Ombudsman Lampung</string>
+
+    <string name="profilOmbudsman">Ombudsman Republik Indonesia yang selanjutnya disebut Ombudsman adalah
+        Lembaga Negara yang mempunyai kewenangan mengawasi Penyelenggaraan Pelayanan Publik baik yang diselenggarakan
+        oleh penyelenggara Negara dan pemerintahan termasuk yang diselenggarakan oleh Badan Usaha Miliki Negara,
+        Badan Usaha Milik Daerah, dan Badan Hukum milik Negara serta Badan Swasta atau perseorangan yang diberi
+        tugas menyelenggarakan pelayanan publik tertentu yang sebagian atau seluruh dananya bersumber dari anggaran
+        pendapatan dan belanja Negara dan/atau anggran pendapatan dan belanja daerah (Pasal 1 Undang-Undang Republik
+        Indonesia Nomor 37 Tahun 2008 Tentang Ombudsman Republik Indonesia).\n\nOmbudsman merupakan Lembaga Negara yang bersifat mandiri dan tidak memiliki hubungan organik dengan Lembaga
+        Negara dan instansi pemerintahan lainnya, serta dalam menjalankan tugas dan wewenangnya bebas dari campur tangan
+        kekuasaan lainnya (pasal 2 Undang-Undang Republik Indonesia Nomor 37 Tahun 2008 Tentang Ombudsman Republik Indonesia).\n\nOmbudsman dalam menjalankan tugas dan wewenangnya berasaskan (pasal 3 Undang-Undang Republik Indonesia.\nNomor 37 Tahun 2008 Tentang Ombudsman Republik Indonesia) :\n\n
+        1. Kepatutan\n
+        2. Keadilan\n
+        3. Non-diskriminasi\n
+        4. Tidak memihak\n
+        5. Akuntabilitas\n
+        6. Keseimbangan\n
+        7. Keterbukaan dan\n
+        8. Kerahasiaan\n
+    </string>
+
+    <string name="visimisi">Visi Ombudsman RI:\n\n<b>“Ombudsman Republik Indonesia Yang Berwibawa, Efektif Dan Adil”</b>,\n\nMisi Ombudsman RI:\n\n1. Memperkuat Kelembagaan.\n2. Meningkatkan kualitas pelayanan Ombudsman RI.\n3. Meningkatkan Partisipasi Masyarakat.\n4. Mendorong peningkatan kualitas pelayanan publik oleh penyelenggara pemerintahan.\n5. Memperkuat pemberantasan dan pencegahan maladministrasi dan korupsi.</string>
+
+    <string name="upayaTerakhir"> Upaya terakhir yang disampaikan kepada Terlapor diharapkan belum lewat 2 tahun.\n
+        Apabila telah lewat dari 2 (dua) tahun, kami tidak dapat menindaklanjutinya.\n
+        Sebaiknya Anda melaporkan kembali laporan Anda kepada instansi terlapor.
+    </string>
+
+    <string name="text_1">Apa itu Ombudsman?</string>
+    <string name="text_2">Apa dasar hukum yang menaungi Ombudsman Republik Indonesia?</string>
+    <string name="text_3">Apa status kelembagaan Ombudsman?</string>
+    <string name="text_4">Berapa orang jumlah pimpinan Ombudsman?</string>
+    <string name="text_6">Apa saja kewenangan Ombudsman?</string>
+    <string name="text_7">Apa saja kewenangan lain yang dimiliki?</string>
+    <string name="text_8">Apa itu maladministrasi?</string>
+
+    <string-array name="string_array_1">
+        <item>Lembaga negara yang mempunyai kewenangan mengawasi penyelenggaraan pelayanan publik
+            yang diselenggarakan oleh Penyelenggara Negara, Pemerintahan, BUMN, BUMD, serta badan
+            swasta yang sebagian atau seluruh dananya bersumber dari anggaran pendapatan dan belanja
+            negara dan/atau anggaran dan belanja daerah.</item>
+    </string-array>
+
+    <string-array name="string_array_2">
+        <item>Undang-Undang Nomor 37 Tahun 2008 tentang Ombudsman Republik Indonesia dan Undang-Undang
+            Nomor 25 Tahun 2009 tentang Pelayanan Publik.</item>
+    </string-array>
+
+    <string-array name="string_array_3">
+        <item>Ombudsman adalah Lembaga Negara yang bersifat Mandiri/Independen.</item>
+        <item>Tidak memiliki hubungan organik dengan lembaga negara dan instansi pemerintah lainnya.</item>
+        <item>Dalam menjalankan tugas dan wewenangnya bebas dari campur tangan kekuasaan lainnya.</item>
+    </string-array>
+
+    <string-array name="string_array_4">
+        <item>Seorang ketua merangkap anggota</item>
+        <item>Seorang wakil ketua merangkap anggota</item>
+        <item>Tujuh orang anggota</item>
+    </string-array>
+
+    <string-array name="string_array_6">
+        <item>Meminta keterangan/penjelasan/klarifikasi, memeriksa keputusan/ dokumen terkait dengan laporan.</item>
+        <item>Memanggil pihak-pihak terkait untuk mendapatkan keterangan/klarifikasi.</item>
+        <item>Melakukan mediasi dan konsiliasi atas permintaan para pihak.</item>
+        <item>Membuat rekomendasi mengenai penyelesaian laporan, termasuk rekomendasi untuk membayar ganti rugi/
+            rehabilitasi kepada pihak yang dirugikan.</item>
+        <item>Mengumumkan/ publikasi hasil temuan, kesimpulan dan rekomendasi.</item>
+        <item>Memberisaran kepada Presiden/ Kepala Daerah/Pimpinan Penyelenggara lain, guna perbaikan/penyempurnaan
+            organisasi atau prosedur pelayanan publik.</item>
+        <item>Memberi saran kepada DPR/D atau Presiden/Kepala Daerah guna penyempurnaan/perubahan perundang-undangan
+            dalam rangka mencegah maladministrasi.</item>
+    </string-array>
+
+    <string-array name="string_array_7">
+        <item>Ombudsman dapat memanggil paksa Terlapor/saksi (apabila setelah 3x dipanggil tidak memenuhi panggilan).</item>
+        <item>Ombudsman dapat melakukan ajudikasi khusus dalam hal penyelesaian ganti rugi pelayanan publik (UU 25/ 2009).</item>
+        <item>Ombudsman diberi hak imunitas (dalam melaksanakan tugas Ombudsman tidak dapat ditangkap, ditahan, diinterogasi,
+            dituntut atau digugat di muka pengadilan)</item>
+    </string-array>
+
+    <string-array name="string_array_8">
+        <item>Perilaku atau perbuatan melawan hukum, melampaui kewenangan, menggunakan kewenangan
+            untuk tujuan lain dari yang menjadi tujuan wewenang tersebut, kelalaian, atau pengabaian
+            kewajiban hukum dalam penyelenggaraan pelayanan publik yang dilakukan oleh penyelenggara
+            negara dan pemerintahan yang menimbulkan kerugian materiil dan/atau immateriil bagi masyarakat
+            dan orang perseorangan.</item>
+    </string-array>
+
+    <string name="verifikasi_akun">
+        Setelah sudah buat akun silahkan login dan arahkan ke menu <b>Akun Saya</b>. Setelah itu klik tombol <b>Ambil gambar</b>
+            dan pilih gambar KTP anda. Jika sudah maka klik tombol <b>unggah</b>. Apabila ingin merubahnya anda tinggal klik lagi tombol <b>ambil gambar</b>.\n\nSetelah itu tunggu proses verifikasi akun anda, apabila selama 2x24 jam akun anda belum terverifikasi maka hubungi kami di menu beranda.\n(disarankan memverifikasi akun pada jam kerja antara jam 8.00 - 17.00 WIB). \n\nSetelah akun anda terverifikasi maka anda dapat menikmati layanan <b>Buat Aduan</b>.
+            \n\nTampilan apabila akun anda sudah terverifikasi :
+    </string>
+
+    <string name="buat_aduan">
+        Sebelum anda ingin membuat aduan di aplikasi ini anda wajib login dan sudah memverifikasi akun anda, apabila sudah pada halaman
+        <b>Buat Aduan</b> anda akan langsung disuguhkan gambar <b>Tata cara penyampaian laporan/ Pengaduan Pelayanan Publik</b> kemudian
+        jika anda gulir ke bawah maka terlihat form pengaduan, silahkan isi lengkap sesuai dengan petunjuk pada halaman tersebut.\n\nJika sudah
+        selesai klik tombol kirim dengan catatan anda harus sudah login di aplikasi email anda (Gmail, Yahoo, dll).
+    </string>
+    <string name="title_activity_nav">NavActivity</string>
+    <string name="title_home">Beranda</string>
+    <string name="title_dashboard">Buat Aduan</string>
+    <string name="title_notifications">Akun Saya</string>
+
+
+</resources>
