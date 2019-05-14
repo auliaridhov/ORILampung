@@ -160,6 +160,7 @@ public class BuatAjuanActivity extends AppCompatActivity implements AdapterView.
             }
         });
 
+        //validasi login atau tidaknya user
         FirebaseUser cuurentUser = mAuth.getCurrentUser();
         if (cuurentUser == null){
             String currentUserId = mAuth.getCurrentUser().getUid();
