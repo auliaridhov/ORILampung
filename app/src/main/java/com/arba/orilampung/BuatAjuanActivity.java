@@ -25,6 +25,7 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
@@ -158,6 +159,16 @@ public class BuatAjuanActivity extends AppCompatActivity implements AdapterView.
                 startActivity(intent);
             }
         });
+
+        FirebaseUser cuurentUser = mAuth.getCurrentUser();
+        if (cuurentUser == null){
+            String currentUserId = mAuth.getCurrentUser().getUid();
+            Toast.makeText(this, "Anda Harus Login untuk membuat aduan.", Toast.LENGTH_SHORT).show();
+            Intent mainInten = new Intent(BuatAjuanActivity.this, NavActivity.class);
+            mainInten.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(mainInten);
+            finish();
+        }
 
         dateFormatter = new SimpleDateFormat("dd-MM-yyyy", Locale.US);
         btDatePicker.setOnClickListener(new View.OnClickListener() {
