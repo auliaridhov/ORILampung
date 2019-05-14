@@ -2,11 +2,32 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/btn_widget"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Buat Pengaduan"
-        android:layout_centerInParent="true"/>
+    <RelativeLayout
+        android:id="@+id/btnWidget"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_margin="14dp"
+        android:background="@drawable/round_border_blue"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Buat Aduan"
+            android:layout_marginLeft="18dp"
+            android:textColor="#FFFF"
+            android:textSize="18sp"
+            android:fontFamily="@font/asap"/>
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="18dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_add_circle_black_24dp"/>
+
+    </RelativeLayout>
 
 </RelativeLayout>
