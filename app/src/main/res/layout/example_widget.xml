@@ -10,12 +10,21 @@
         android:background="@drawable/round_border_blue"
         android:layout_centerInParent="true">
 
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="18dp"
+            android:src="@drawable/logoapps2"/>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:text="Buat Aduan"
-            android:layout_marginLeft="18dp"
+            android:layout_toRightOf="@+id/logo"
+            android:layout_marginLeft="12dp"
             android:textColor="#FFFF"
             android:textSize="18sp"
             android:fontFamily="@font/asap"/>
