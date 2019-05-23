@@ -22,6 +22,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.arba.orilampung.db.PengaduanHelper;
+import com.arba.orilampung.entity.Pengaduan;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -30,12 +32,27 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
 
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Locale;
 
 public class BuatAjuanActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+
+
+    public static final String EXTRA_NOTE = "extra_note";
+    public static final String EXTRA_POSITION = "extra_position";
+    private boolean isEdit = false;
+    public static final int REQUEST_ADD = 100;
+    public static final int RESULT_ADD = 101;
+    public static final int REQUEST_UPDATE = 200;
+    public static final int RESULT_UPDATE = 201;
+    public static final int RESULT_DELETE = 301;
+    private Pengaduan pengaduan;
+    private int position;
+    private PengaduanHelper pengaduanHelper;
 
     private DatabaseReference dbref;
     private FirebaseAuth mAuth;
@@ -52,12 +69,12 @@ public class BuatAjuanActivity extends AppCompatActivity implements AdapterView.
     private TextView textView10;
     private TextView textView11;
     private TextView textView12;
-    private Spinner spinner;
-    private Spinner spinner2;
-    private Spinner spinner3;
-    private Spinner spinner4;
-    private Spinner spinner5;
-    private Spinner spinner6;
+    private Spinner spiner;
+    private Spinner spiner2;
+    private Spinner spiner3;
+    private Spinner spiner4;
+    private Spinner spiner5;
+    private Spinner spiner6;
     private CheckBox checkBox;
     private RadioGroup radioGroup;
     private RadioGroup radioGroup2;
@@ -88,6 +105,18 @@ public class BuatAjuanActivity extends AppCompatActivity implements AdapterView.
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_buat_ajuan);
 
+        pengaduanHelper = PengaduanHelper.getInstance(getApplicationContext());
+        pengaduan = getIntent().getParcelableExtra(EXTRA_NOTE);
+        if (pengaduan != null) {
+            position = getIntent().getIntExtra(EXTRA_POSITION, 0);
+            isEdit = true;
+        } else {
+            pengaduan = new Pengaduan();
+        }
+
+
+
+
         Button button1 = (Button) findViewById(R.id.button1);
         Button batal = (Button) findViewById(R.id.btnBatal);
         textView = (TextView) findViewById(R.id.et_nama);
@@ -100,14 +129,14 @@ public class BuatAjuanActivity extends AppCompatActivity implements AdapterView.
         final TextView textView10 = (TextView) findViewById(R.id.et_alamatTerlapor);
         final TextView textView12 = (TextView) findViewById(R.id.et_harapan);
         final CheckBox checkBox = (CheckBox) findViewById(R.id.checkBox);
-        final Spinner spiner = (Spinner) findViewById(R.id.simpleSpinner);
-        final Spinner spiner2 = (Spinner) findViewById(R.id.simpleSpinner2);
-        final Spinner spiner3 = (Spinner) findViewById(R.id.simpleSpinner3);
-        final Spinner spiner4 = (Spinner) findViewById(R.id.simpleSpinner4);
-        final Spinner spiner5 = (Spinner) findViewById(R.id.simpleSpinner5);
-        final Spinner spiner6 = (Spinner) findViewById(R.id.simpleSpinner6);
-        final RadioGroup radioGroup = (RadioGroup) findViewById(R.id.myRadioGroup);
-        final RadioGroup radioGroup2 = (RadioGroup) findViewById(R.id.myRadioGroup2);
+        spiner = (Spinner) findViewById(R.id.simpleSpinner);
+        spiner2 = (Spinner) findViewById(R.id.simpleSpinner2);
+        spiner3 = (Spinner) findViewById(R.id.simpleSpinner3);
+        spiner4 = (Spinner) findViewById(R.id.simpleSpinner4);
+        spiner5 = (Spinner) findViewById(R.id.simpleSpinner5);
+        spiner6 = (Spinner) findViewById(R.id.simpleSpinner6);
+        radioGroup = (RadioGroup) findViewById(R.id.myRadioGroup);
+        radioGroup2 = (RadioGroup) findViewById(R.id.myRadioGroup2);
         final RadioGroup radioGroup3 = (RadioGroup) findViewById(R.id.myRadioGroup3);
 
         final ImageView imageView = (ImageView) findViewById(R.id.image);
@@ -170,6 +199,22 @@ public class BuatAjuanActivity extends AppCompatActivity implements AdapterView.
             startActivity(mainInten);
             finish();
         }
+
+        TextView draft = findViewById(R.id.draftTV);
+        draft.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(BuatAjuanActivity.this, DraftActivity.class);
+                startActivity(intent);
+            }
+        });
+        Button simpan = findViewById(R.id.simpandraft);
+        simpan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                simpankedraft();
+            }
+        });
 
         dateFormatter = new SimpleDateFormat("dd-MM-yyyy", Locale.US);
         btDatePicker.setOnClickListener(new View.OnClickListener() {
@@ -356,5 +401,69 @@ public class BuatAjuanActivity extends AppCompatActivity implements AdapterView.
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 
+    }
+
+
+    private void simpankedraft(){
+        String nama = textView.getText().toString();
+        String terlapor = textView7.getText().toString();
+
+        if (TextUtils.isEmpty(nama)) {
+            textView.setError("Field can not be blank");
+            return;
+        }
+
+        pengaduan.setNamapelapor(nama);
+        pengaduan.setJeniskelamin(radioButton.getText().toString());
+        pengaduan.setKependudukan(radioButton2.getText().toString());
+        pengaduan.setNomoridentitas(textView2.getText().toString());
+        pengaduan.setEmail(textView3.getText().toString());
+        pengaduan.setNotlp(textView4.getText().toString());
+        pengaduan.setStatus(spiner2.getSelectedItem().toString());
+        pengaduan.setAlamat(textView5.getText().toString());
+        pengaduan.setKota(spiner5.getSelectedItem().toString());
+        pengaduan.setKlasifikasi(spiner3.getSelectedItem().toString());
+        pengaduan.setNamaInstansiTerlapor(textView7.getText().toString());
+        pengaduan.setSudahMelaporkan(radioButton3.getText().toString());
+        pengaduan.setTglUpayaLapor(tvDateResult.getText().toString());
+        pengaduan.setLaporMelalui(spiner4.getSelectedItem().toString());
+        pengaduan.setMelaporKepada(textView9.getText().toString());
+        pengaduan.setAlamatTerlapor(textView10.getText().toString());
+        pengaduan.setKotaMelapor(spiner6.getSelectedItem().toString());
+        pengaduan.setHarapanPelapor(textView12.getText().toString());
+
+
+        Intent intent = new Intent();
+        intent.putExtra(EXTRA_NOTE, pengaduan);
+        intent.putExtra(EXTRA_POSITION, position);
+        pengaduan.setTglSkrg(getCurrentDate());
+        long result = pengaduanHelper.insertPengaduan(pengaduan);
+
+        if (result > 0) {
+            pengaduan.setId((int) result);
+            setResult(RESULT_ADD, intent);
+            finish();
+        } else {
+            Toast.makeText(BuatAjuanActivity.this, "Gagal menambah data", Toast.LENGTH_SHORT).show();
+        }
+
+//        if (isEdit) {
+//            //long result = pengaduanHelper.upda(pengaduan);
+//            if (result > 0) {
+//                setResult(RESULT_UPDATE, intent);
+//                finish();
+//            } else {
+//                Toast.makeText(BuatAjuanActivity.this, "Gagal mengupdate data", Toast.LENGTH_SHORT).show();
+//            }
+//        } else {
+
+       // }
+    }
+
+    private String getCurrentDate() {
+        DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss", Locale.getDefault());
+        Date date = new Date();
+
+        return dateFormat.format(date);
     }
 }

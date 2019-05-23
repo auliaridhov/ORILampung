@@ -23,6 +23,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lihat Draft"
+                android:id="@+id/draftTV"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/colorPrimary"
+                android:padding="5dp" />
+
         <ImageView
         android:id="@+id/image"
         android:layout_width="match_parent"
@@ -460,6 +469,23 @@
                     android:layout_centerHorizontal="true"
                     android:background="@drawable/round_border_blue"
                     android:text="kirim" />
+
+
+            </RelativeLayout>
+                <RelativeLayout
+                android:layout_marginTop="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+                <Button
+                    android:id="@+id/simpandraft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fff"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/round_border_blue"
+                    android:text="SIMPAN" />
+
 
             </RelativeLayout>
 

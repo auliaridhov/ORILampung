@@ -128,7 +128,6 @@ public class LacakAduanActivity extends AppCompatActivity {
     }
 
 
-
     @Override
     public void onStop() {
         super.onStop();
