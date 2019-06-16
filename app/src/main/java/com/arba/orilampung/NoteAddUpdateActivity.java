@@ -65,15 +65,15 @@ public class NoteAddUpdateActivity extends AppCompatActivity
         String btnTitle;
 
         if (isEdit) {
-            actionBarTitle = "Ubah";
-            btnTitle = "Update";
+            actionBarTitle = "Ubah Catatan Aduan";
+            btnTitle = "Simpan";
 
             if (note != null) {
                 edtTitle.setText(note.getTitle());
                 edtDescription.setText(note.getDescription());
             }
         } else {
-            actionBarTitle = "Tambah";
+            actionBarTitle = "Tambah Catatan Aduan";
             btnTitle = "Simpan";
         }
 
@@ -169,8 +169,8 @@ public class NoteAddUpdateActivity extends AppCompatActivity
             dialogTitle = "Batal";
             dialogMessage = "Apakah anda ingin membatalkan perubahan pada form?";
         } else {
-            dialogMessage = "Apakah anda yakin ingin menghapus item ini?";
-            dialogTitle = "Hapus Note";
+            dialogMessage = "Apakah anda yakin ingin menghapus catatan ini?";
+            dialogTitle = "Hapus Catatan Aduan";
         }
 
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
