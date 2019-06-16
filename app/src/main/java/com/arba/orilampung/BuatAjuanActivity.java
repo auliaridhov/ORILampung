@@ -22,7 +22,6 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.arba.orilampung.db.PengaduanHelper;
 import com.arba.orilampung.entity.Pengaduan;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -52,7 +51,6 @@ public class BuatAjuanActivity extends AppCompatActivity implements AdapterView.
     public static final int RESULT_DELETE = 301;
     private Pengaduan pengaduan;
     private int position;
-    private PengaduanHelper pengaduanHelper;
 
     private DatabaseReference dbref;
     private FirebaseAuth mAuth;
@@ -105,7 +103,7 @@ public class BuatAjuanActivity extends AppCompatActivity implements AdapterView.
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_buat_ajuan);
 
-        pengaduanHelper = PengaduanHelper.getInstance(getApplicationContext());
+
         pengaduan = getIntent().getParcelableExtra(EXTRA_NOTE);
         if (pengaduan != null) {
             position = getIntent().getIntExtra(EXTRA_POSITION, 0);
@@ -201,14 +199,7 @@ public class BuatAjuanActivity extends AppCompatActivity implements AdapterView.
             finish();
         }
 
-        TextView draft = findViewById(R.id.draftTV);
-        draft.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(BuatAjuanActivity.this, DraftActivity.class);
-                startActivity(intent);
-            }
-        });
+
         Button simpan = findViewById(R.id.simpandraft);
         simpan.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -435,23 +426,22 @@ public class BuatAjuanActivity extends AppCompatActivity implements AdapterView.
 //        pengaduan.setKotaMelapor(spiner6.getSelectedItem().toString());
 //        pengaduan.setHarapanPelapor(textView12.getText().toString());
 //
-
-        Intent intent = new Intent();
-        intent.putExtra(EXTRA_NOTE, pengaduan);
-        intent.putExtra(EXTRA_POSITION, position);
-        pengaduan.setTglSkrg(getCurrentDate());
-        long result = pengaduanHelper.insertPengaduan(pengaduan);
-        pengaduan.setId((int) result);
-        setResult(RESULT_ADD, intent);
-        finish();
-
-        if (result > 0) {
-            pengaduan.setId((int) result);
-            setResult(RESULT_ADD, intent);
-            finish();
-        } else {
-            Toast.makeText(BuatAjuanActivity.this, "Gagal menambah data", Toast.LENGTH_SHORT).show();
-        }
+//
+//        Intent intent = new Intent();
+//        intent.putExtra(EXTRA_NOTE, pengaduan);
+//        intent.putExtra(EXTRA_POSITION, position);
+//        pengaduan.setTglSkrg(getCurrentDate());
+//        pengaduan.setId((int) result);
+//        setResult(RESULT_ADD, intent);
+//        finish();
+//
+//        if (result > 0) {
+//            pengaduan.setId((int) result);
+//            setResult(RESULT_ADD, intent);
+//            finish();
+//        } else {
+//            Toast.makeText(BuatAjuanActivity.this, "Gagal menambah data", Toast.LENGTH_SHORT).show();
+//        }
 
 //        if (isEdit) {
 //            //long result = pengaduanHelper.upda(pengaduan);

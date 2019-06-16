@@ -182,48 +182,46 @@
                         android:backgroundTint="#ffff"
                         app:cardCornerRadius="8dp">
 
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
 
-                        <ImageView
-                            android:id="@+id/image1"
-                            android:layout_alignParentLeft="true"
-                            android:src="@drawable/icon_call"
-                            android:layout_width="48dp"
-                            android:padding="8dp"
-                            android:layout_height="wrap_content"
-                            />
+                            <ImageView
+                                android:id="@+id/image1"
+                                android:layout_width="48dp"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:padding="8dp"
+                                android:src="@drawable/icon_call" />
 
-                        <TextView
-                            android:layout_marginTop="16dp"
-                            android:id="@+id/tv1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Hubungi Ombudsman"
-                            android:textColor="#000"
-                            android:textSize="12dp"
-                            android:layout_toRightOf="@id/image1"
-                            />
+                            <TextView
+                                android:id="@+id/tv1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="16dp"
+                                android:layout_toRightOf="@id/image1"
+                                android:text="Hubungi Ombudsman"
+                                android:textColor="#000"
+                                android:textSize="12dp" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textStyle="italic"
-                            android:layout_below="@id/tv1"
-                            android:layout_toRightOf="@id/image1"
-                            android:textSize="10dp"
-                            android:text="Awasi, Tegur dan Laporkan"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/tv1"
+                                android:layout_toRightOf="@id/image1"
+                                android:text="Awasi, Tegur dan Laporkan"
+                                android:textSize="10dp"
+                                android:textStyle="italic" />
 
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentRight="true"
-                            android:layout_centerInParent="true"
-                            android:layout_marginRight="6dp"
-                            android:src="@drawable/ic_chevron_right_black_24dp"/>
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerInParent="true"
+                                android:layout_marginRight="6dp"
+                                android:src="@drawable/ic_chevron_right_black_24dp" />
 
-                    </RelativeLayout>
+                        </RelativeLayout>
 
                     </android.support.v7.widget.CardView>
 
@@ -309,15 +307,14 @@
                                 />
 
                             <TextView
-                                android:layout_marginTop="16dp"
                                 android:id="@+id/tv2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_marginTop="16dp"
+                                android:layout_toRightOf="@id/image2"
                                 android:text="Lacak Aduan"
                                 android:textColor="#000"
-                                android:textSize="12dp"
-                                android:layout_toRightOf="@id/image2"
-                                />
+                                android:textSize="12dp" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -482,7 +479,7 @@
                         android:id="@+id/linkArtikel"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/artikel"/>
+                        android:src="@drawable/artikel" />
 
                 </RelativeLayout>
 

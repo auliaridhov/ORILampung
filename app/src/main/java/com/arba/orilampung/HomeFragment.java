@@ -370,7 +370,38 @@ public class HomeFragment extends Fragment {
         card5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getContext(), "Silahkan masuk atau registrasi untuk akses layanan ini!", Toast.LENGTH_SHORT).show();
+                if (isConnected()) {
+                    FirebaseUser cuurentUser = mAuth.getCurrentUser();
+                    if (cuurentUser != null) {
+                        String userId = mAuth.getCurrentUser().getUid();
+                        userRef.child(userId).addValueEventListener(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                if (dataSnapshot.exists()){
+                                    String verif = dataSnapshot.child("verif").getValue().toString();
+                                    if (verif.equals("sudah")){
+                                        Intent intent = new Intent(getContext(), CatatanActivity.class);
+                                        startActivity(intent);
+                                    } else {
+                                        Toast.makeText(getContext(), "Tunggu verifikasi akun anda untuk mengakses layanan ini", Toast.LENGTH_SHORT).show();
+                                    }
+
+                                }
+                            }
+
+                            @Override
+                            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                            }
+                        });
+
+                    }
+                    else {
+                        Toast.makeText(getContext(), "Silahkan masuk atau registrasi untuk akses layanan ini!", Toast.LENGTH_SHORT).show();
+                    }
+                } else {
+                    Toast.makeText(getContext(), "Terjadi kesalahan, cek koneksi internet anda!", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
