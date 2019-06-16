@@ -34,7 +34,7 @@ public class CatatanActivity extends AppCompatActivity implements View.OnClickLi
         setContentView(R.layout.activity_catatan);
 
         if (getSupportActionBar() != null)
-            getSupportActionBar().setTitle("Notes");
+            getSupportActionBar().setTitle("Catatan Aduan");
 
         rvNotes = findViewById(R.id.rv_notes);
         rvNotes.setLayoutManager(new LinearLayoutManager(this));
