@@ -62,7 +62,7 @@ public class HomeFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-    private CardView card0, card1, card2, card3, card4;
+    private CardView card0, card1, card2, card3, card4, card5;
     private View myMainView;
     private DatabaseReference userRef;
     private DatabaseReference dbRef;
@@ -121,6 +121,7 @@ public class HomeFragment extends Fragment {
         card2 = myMainView.findViewById(R.id.card2);
         card3 = myMainView.findViewById(R.id.card3);
         card4 = myMainView.findViewById(R.id.card4);
+        card5 = myMainView.findViewById(R.id.card5);
         highligh1 = myMainView.findViewById(R.id.img1);
         highligh2 = myMainView.findViewById(R.id.img2);
         highligh3 = myMainView.findViewById(R.id.img3);
@@ -363,6 +364,13 @@ public class HomeFragment extends Fragment {
             public void onClick(View v) {
                 Intent card4Intent = new Intent(getContext(), ProfilOmbudsman.class);
                 startActivity(card4Intent);
+            }
+        });
+
+        card5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getContext(), "Silahkan masuk atau registrasi untuk akses layanan ini!", Toast.LENGTH_SHORT).show();
             }
         });
 
