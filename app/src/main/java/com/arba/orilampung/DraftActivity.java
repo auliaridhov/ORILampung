@@ -33,7 +33,7 @@ public class DraftActivity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_draft);
         if (getSupportActionBar() != null)
-            getSupportActionBar().setTitle("Notes");
+            getSupportActionBar().setTitle("Draft");
         rvNotes = findViewById(R.id.rv_notes);
         rvNotes.setLayoutManager(new LinearLayoutManager(this));
         rvNotes.setHasFixedSize(true);

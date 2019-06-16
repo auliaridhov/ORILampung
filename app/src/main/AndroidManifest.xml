@@ -15,7 +15,11 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:theme="@style/AppTheme">
-        <activity android:name=".DraftActivity"></activity>
+        <activity
+            android:name=".DraftActivity"
+            android:label="Draft"
+            android:parentActivityName=".BuatAjuanActivity"
+            android:theme="@style/faq"/>
         <activity
             android:name=".NavActivity"
             android:label="@string/title_activity_nav" />

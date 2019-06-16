@@ -11,22 +11,22 @@ public class DatabaseHelper  extends SQLiteOpenHelper {
                     + " (%s INTEGER PRIMARY KEY AUTOINCREMENT," +
                     " %s TEXT NOT NULL," +
                     " %s TEXT NOT NULL," +
-                    " %s TEXT NOT NULL," +
-                    " %s TEXT NOT NULL," +
-                    " %s TEXT NOT NULL," +
-                    " %s TEXT NOT NULL," +
-                    " %s TEXT NOT NULL," +
-                    " %s TEXT NOT NULL," +
-                    " %s TEXT NOT NULL," +
-                    " %s TEXT NOT NULL," +
-                    " %s TEXT NOT NULL," +
-                    " %s TEXT NOT NULL," +
-                    " %s TEXT NOT NULL," +
-                    " %s TEXT NOT NULL," +
-                    " %s TEXT NOT NULL," +
-                    " %s TEXT NOT NULL," +
-                    " %s TEXT NOT NULL," +
-                    " %s TEXT NOT NULL," +
+//                    " %s TEXT NOT NULL," +
+//                    " %s TEXT NOT NULL," +
+//                    " %s TEXT NOT NULL," +
+//                    " %s TEXT NOT NULL," +
+//                    " %s TEXT NOT NULL," +
+//                    " %s TEXT NOT NULL," +
+//                    " %s TEXT NOT NULL," +
+//                    " %s TEXT NOT NULL," +
+//                    " %s TEXT NOT NULL," +
+//                    " %s TEXT NOT NULL," +
+//                    " %s TEXT NOT NULL," +
+//                    " %s TEXT NOT NULL," +
+//                    " %s TEXT NOT NULL," +
+                  //  " %s TEXT NOT NULL," +
+//                    " %s TEXT NOT NULL," +
+//                    " %s TEXT NOT NULL," +
                     " %s TEXT NOT NULL)",
             DatabaseContract.TABLE_PENGADUAN,
             DatabaseContract.PengaduanColumns._ID,
@@ -34,23 +34,23 @@ public class DatabaseHelper  extends SQLiteOpenHelper {
             DatabaseContract.PengaduanColumns.TGLSKRG,
 
             DatabaseContract.PengaduanColumns.NAMAPELAPOR,
-            DatabaseContract.PengaduanColumns.JENISKELAMIN,
-            DatabaseContract.PengaduanColumns.KEPENDUDUKAN,
-            DatabaseContract.PengaduanColumns.NOMORIDENTITAS,
-            DatabaseContract.PengaduanColumns.EMAIL,
-            DatabaseContract.PengaduanColumns.NOTLP,
-            DatabaseContract.PengaduanColumns.STATUS,
-            DatabaseContract.PengaduanColumns.ALAMAT,
-            DatabaseContract.PengaduanColumns.KOTA,
-            DatabaseContract.PengaduanColumns.KLASIFIKASI,
-            DatabaseContract.PengaduanColumns.NAMAINSTANSI,
-            DatabaseContract.PengaduanColumns.SUDAHMELAPOR,
-            DatabaseContract.PengaduanColumns.TGLUPAYALAPOR,
-            DatabaseContract.PengaduanColumns.LAPORMELALUI,
-            DatabaseContract.PengaduanColumns.MELAPORKEPADA,
-            DatabaseContract.PengaduanColumns.ALAMATTERLAPOR,
-            DatabaseContract.PengaduanColumns.KOTAMELAPOR,
-            DatabaseContract.PengaduanColumns.HARAPANPELAPOR
+            //DatabaseContract.PengaduanColumns.JENISKELAMIN,
+         //   DatabaseContract.PengaduanColumns.KEPENDUDUKAN,
+//            DatabaseContract.PengaduanColumns.NOMORIDENTITAS,
+//            DatabaseContract.PengaduanColumns.EMAIL,
+//            DatabaseContract.PengaduanColumns.NOTLP,
+//            DatabaseContract.PengaduanColumns.STATUS,
+//            DatabaseContract.PengaduanColumns.ALAMAT,
+//            DatabaseContract.PengaduanColumns.KOTA,
+//            DatabaseContract.PengaduanColumns.KLASIFIKASI,
+            DatabaseContract.PengaduanColumns.NAMAINSTANSI
+          //  DatabaseContract.PengaduanColumns.SUDAHMELAPOR,
+//            DatabaseContract.PengaduanColumns.TGLUPAYALAPOR,
+//            DatabaseContract.PengaduanColumns.LAPORMELALUI,
+//            DatabaseContract.PengaduanColumns.MELAPORKEPADA,
+//            DatabaseContract.PengaduanColumns.ALAMATTERLAPOR,
+//            DatabaseContract.PengaduanColumns.KOTAMELAPOR,
+//            DatabaseContract.PengaduanColumns.HARAPANPELAPOR
 
             );
 

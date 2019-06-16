@@ -115,20 +115,21 @@ public class BuatAjuanActivity extends AppCompatActivity implements AdapterView.
         }
 
 
+        pengaduan = new Pengaduan();
 
 
         Button button1 = (Button) findViewById(R.id.button1);
         Button batal = (Button) findViewById(R.id.btnBatal);
         textView = (TextView) findViewById(R.id.et_nama);
-        final TextView textView2 = (TextView) findViewById(R.id.et_identitas);
-        final TextView textView3 = (TextView) findViewById(R.id.et_email);
-        final TextView textView4 = (TextView) findViewById(R.id.et_noHp);
-        final TextView textView5 = (TextView) findViewById(R.id.et_alamat);
+        textView2 = (TextView) findViewById(R.id.et_identitas);
+        textView3 = (TextView) findViewById(R.id.et_email);
+        textView4 = (TextView) findViewById(R.id.et_noHp);
+        textView5 = (TextView) findViewById(R.id.et_alamat);
          textView7 = (TextView) findViewById(R.id.et_namaInstansi);
-        final TextView textView9 = (TextView) findViewById(R.id.et_laporKpd);
-        final TextView textView10 = (TextView) findViewById(R.id.et_alamatTerlapor);
-        final TextView textView12 = (TextView) findViewById(R.id.et_harapan);
-        final CheckBox checkBox = (CheckBox) findViewById(R.id.checkBox);
+        textView9 = (TextView) findViewById(R.id.et_laporKpd);
+        textView10 = (TextView) findViewById(R.id.et_alamatTerlapor);
+        textView12 = (TextView) findViewById(R.id.et_harapan);
+        checkBox = (CheckBox) findViewById(R.id.checkBox);
         spiner = (Spinner) findViewById(R.id.simpleSpinner);
         spiner2 = (Spinner) findViewById(R.id.simpleSpinner2);
         spiner3 = (Spinner) findViewById(R.id.simpleSpinner3);
@@ -406,7 +407,9 @@ public class BuatAjuanActivity extends AppCompatActivity implements AdapterView.
 
     private void simpankedraft(){
         String nama = textView.getText().toString();
-        String terlapor = textView7.getText().toString();
+        //String terlapor = textView7.getText().toString();
+
+        pengaduan = new Pengaduan();
 
         if (TextUtils.isEmpty(nama)) {
             textView.setError("Field can not be blank");
@@ -414,30 +417,33 @@ public class BuatAjuanActivity extends AppCompatActivity implements AdapterView.
         }
 
         pengaduan.setNamapelapor(nama);
-        pengaduan.setJeniskelamin(radioButton.getText().toString());
-        pengaduan.setKependudukan(radioButton2.getText().toString());
-        pengaduan.setNomoridentitas(textView2.getText().toString());
-        pengaduan.setEmail(textView3.getText().toString());
-        pengaduan.setNotlp(textView4.getText().toString());
-        pengaduan.setStatus(spiner2.getSelectedItem().toString());
-        pengaduan.setAlamat(textView5.getText().toString());
-        pengaduan.setKota(spiner5.getSelectedItem().toString());
-        pengaduan.setKlasifikasi(spiner3.getSelectedItem().toString());
+        //pengaduan.setJeniskelamin(radioButton.getText().toString());
+        //pengaduan.setKependudukan(radioButton2.getText().toString());
+//        pengaduan.setNomoridentitas(textView2.getText().toString());
+//        pengaduan.setEmail(textView3.getText().toString());
+//        pengaduan.setNotlp(textView4.getText().toString());
+//        pengaduan.setStatus(spiner2.getSelectedItem().toString());
+//        pengaduan.setAlamat(textView5.getText().toString());
+//        pengaduan.setKota(spiner5.getSelectedItem().toString());
+//        pengaduan.setKlasifikasi(spiner3.getSelectedItem().toString());
         pengaduan.setNamaInstansiTerlapor(textView7.getText().toString());
-        pengaduan.setSudahMelaporkan(radioButton3.getText().toString());
-        pengaduan.setTglUpayaLapor(tvDateResult.getText().toString());
-        pengaduan.setLaporMelalui(spiner4.getSelectedItem().toString());
-        pengaduan.setMelaporKepada(textView9.getText().toString());
-        pengaduan.setAlamatTerlapor(textView10.getText().toString());
-        pengaduan.setKotaMelapor(spiner6.getSelectedItem().toString());
-        pengaduan.setHarapanPelapor(textView12.getText().toString());
-
+      //  pengaduan.setSudahMelaporkan(radioButton3.getText().toString());
+//        pengaduan.setTglUpayaLapor(tvDateResult.getText().toString());
+//        pengaduan.setLaporMelalui(spiner4.getSelectedItem().toString());
+//        pengaduan.setMelaporKepada(textView9.getText().toString());
+//        pengaduan.setAlamatTerlapor(textView10.getText().toString());
+//        pengaduan.setKotaMelapor(spiner6.getSelectedItem().toString());
+//        pengaduan.setHarapanPelapor(textView12.getText().toString());
+//
 
         Intent intent = new Intent();
         intent.putExtra(EXTRA_NOTE, pengaduan);
         intent.putExtra(EXTRA_POSITION, position);
         pengaduan.setTglSkrg(getCurrentDate());
         long result = pengaduanHelper.insertPengaduan(pengaduan);
+        pengaduan.setId((int) result);
+        setResult(RESULT_ADD, intent);
+        finish();
 
         if (result > 0) {
             pengaduan.setId((int) result);

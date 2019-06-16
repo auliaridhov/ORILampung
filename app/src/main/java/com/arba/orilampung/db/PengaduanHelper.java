@@ -12,25 +12,25 @@ import com.arba.orilampung.entity.Pengaduan;
 import java.util.ArrayList;
 
 import static android.provider.BaseColumns._ID;
-import static com.arba.orilampung.db.DatabaseContract.PengaduanColumns.ALAMAT;
-import static com.arba.orilampung.db.DatabaseContract.PengaduanColumns.ALAMATTERLAPOR;
-import static com.arba.orilampung.db.DatabaseContract.PengaduanColumns.EMAIL;
-import static com.arba.orilampung.db.DatabaseContract.PengaduanColumns.HARAPANPELAPOR;
-import static com.arba.orilampung.db.DatabaseContract.PengaduanColumns.JENISKELAMIN;
-import static com.arba.orilampung.db.DatabaseContract.PengaduanColumns.KEPENDUDUKAN;
-import static com.arba.orilampung.db.DatabaseContract.PengaduanColumns.KLASIFIKASI;
-import static com.arba.orilampung.db.DatabaseContract.PengaduanColumns.KOTA;
-import static com.arba.orilampung.db.DatabaseContract.PengaduanColumns.KOTAMELAPOR;
-import static com.arba.orilampung.db.DatabaseContract.PengaduanColumns.LAPORMELALUI;
-import static com.arba.orilampung.db.DatabaseContract.PengaduanColumns.MELAPORKEPADA;
+//import static com.arba.orilampung.db.DatabaseContract.PengaduanColumns.ALAMAT;
+//import static com.arba.orilampung.db.DatabaseContract.PengaduanColumns.ALAMATTERLAPOR;
+//import static com.arba.orilampung.db.DatabaseContract.PengaduanColumns.EMAIL;
+//import static com.arba.orilampung.db.DatabaseContract.PengaduanColumns.HARAPANPELAPOR;
+//import static com.arba.orilampung.db.DatabaseContract.PengaduanColumns.JENISKELAMIN;
+//import static com.arba.orilampung.db.DatabaseContract.PengaduanColumns.KEPENDUDUKAN;
+//import static com.arba.orilampung.db.DatabaseContract.PengaduanColumns.KLASIFIKASI;
+//import static com.arba.orilampung.db.DatabaseContract.PengaduanColumns.KOTA;
+//import static com.arba.orilampung.db.DatabaseContract.PengaduanColumns.KOTAMELAPOR;
+//import static com.arba.orilampung.db.DatabaseContract.PengaduanColumns.LAPORMELALUI;
+//import static com.arba.orilampung.db.DatabaseContract.PengaduanColumns.MELAPORKEPADA;
 import static com.arba.orilampung.db.DatabaseContract.PengaduanColumns.NAMAINSTANSI;
 import static com.arba.orilampung.db.DatabaseContract.PengaduanColumns.NAMAPELAPOR;
-import static com.arba.orilampung.db.DatabaseContract.PengaduanColumns.NOMORIDENTITAS;
-import static com.arba.orilampung.db.DatabaseContract.PengaduanColumns.NOTLP;
-import static com.arba.orilampung.db.DatabaseContract.PengaduanColumns.STATUS;
-import static com.arba.orilampung.db.DatabaseContract.PengaduanColumns.SUDAHMELAPOR;
+//import static com.arba.orilampung.db.DatabaseContract.PengaduanColumns.NOMORIDENTITAS;
+//import static com.arba.orilampung.db.DatabaseContract.PengaduanColumns.NOTLP;
+//import static com.arba.orilampung.db.DatabaseContract.PengaduanColumns.STATUS;
+//import static com.arba.orilampung.db.DatabaseContract.PengaduanColumns.SUDAHMELAPOR;
 import static com.arba.orilampung.db.DatabaseContract.PengaduanColumns.TGLSKRG;
-import static com.arba.orilampung.db.DatabaseContract.PengaduanColumns.TGLUPAYALAPOR;
+//import static com.arba.orilampung.db.DatabaseContract.PengaduanColumns.TGLUPAYALAPOR;
 import static com.arba.orilampung.db.DatabaseContract.TABLE_PENGADUAN;
 
 public class PengaduanHelper {
@@ -84,23 +84,23 @@ public class PengaduanHelper {
 
                 pengaduan.setTglSkrg(cursor.getString(cursor.getColumnIndexOrThrow(TGLSKRG)));
                 pengaduan.setNamapelapor(cursor.getString(cursor.getColumnIndexOrThrow(NAMAPELAPOR)));
-                pengaduan.setJeniskelamin(cursor.getString(cursor.getColumnIndexOrThrow(JENISKELAMIN)));
-                pengaduan.setKependudukan(cursor.getString(cursor.getColumnIndexOrThrow(KEPENDUDUKAN)));
-                pengaduan.setNomoridentitas(cursor.getString(cursor.getColumnIndexOrThrow(NOMORIDENTITAS)));
-                pengaduan.setEmail(cursor.getString(cursor.getColumnIndexOrThrow(EMAIL)));
-                pengaduan.setNotlp(cursor.getString(cursor.getColumnIndexOrThrow(NOTLP)));
-                pengaduan.setStatus(cursor.getString(cursor.getColumnIndexOrThrow(STATUS)));
-                pengaduan.setAlamat(cursor.getString(cursor.getColumnIndexOrThrow(ALAMAT)));
-                pengaduan.setKota(cursor.getString(cursor.getColumnIndexOrThrow(KOTA)));
-                pengaduan.setKlasifikasi(cursor.getString(cursor.getColumnIndexOrThrow(KLASIFIKASI)));
+              //  pengaduan.setJeniskelamin(cursor.getString(cursor.getColumnIndexOrThrow(JENISKELAMIN)));
+               // pengaduan.setKependudukan(cursor.getString(cursor.getColumnIndexOrThrow(KEPENDUDUKAN)));
+//                pengaduan.setNomoridentitas(cursor.getString(cursor.getColumnIndexOrThrow(NOMORIDENTITAS)));
+//                pengaduan.setEmail(cursor.getString(cursor.getColumnIndexOrThrow(EMAIL)));
+//                pengaduan.setNotlp(cursor.getString(cursor.getColumnIndexOrThrow(NOTLP)));
+//                pengaduan.setStatus(cursor.getString(cursor.getColumnIndexOrThrow(STATUS)));
+//                pengaduan.setAlamat(cursor.getString(cursor.getColumnIndexOrThrow(ALAMAT)));
+//                pengaduan.setKota(cursor.getString(cursor.getColumnIndexOrThrow(KOTA)));
+//                pengaduan.setKlasifikasi(cursor.getString(cursor.getColumnIndexOrThrow(KLASIFIKASI)));
                 pengaduan.setNamaInstansiTerlapor(cursor.getString(cursor.getColumnIndexOrThrow(NAMAINSTANSI)));
-                pengaduan.setSudahMelaporkan(cursor.getString(cursor.getColumnIndexOrThrow(SUDAHMELAPOR)));
-                pengaduan.setTglUpayaLapor(cursor.getString(cursor.getColumnIndexOrThrow(TGLUPAYALAPOR)));
-                pengaduan.setLaporMelalui(cursor.getString(cursor.getColumnIndexOrThrow(LAPORMELALUI)));
-                pengaduan.setMelaporKepada(cursor.getString(cursor.getColumnIndexOrThrow(MELAPORKEPADA)));
-                pengaduan.setAlamatTerlapor(cursor.getString(cursor.getColumnIndexOrThrow(ALAMATTERLAPOR)));
-                pengaduan.setKotaMelapor(cursor.getString(cursor.getColumnIndexOrThrow(KOTAMELAPOR)));
-                pengaduan.setHarapanPelapor(cursor.getString(cursor.getColumnIndexOrThrow(HARAPANPELAPOR)));
+              //  pengaduan.setSudahMelaporkan(cursor.getString(cursor.getColumnIndexOrThrow(SUDAHMELAPOR)));
+//                pengaduan.setTglUpayaLapor(cursor.getString(cursor.getColumnIndexOrThrow(TGLUPAYALAPOR)));
+//                pengaduan.setLaporMelalui(cursor.getString(cursor.getColumnIndexOrThrow(LAPORMELALUI)));
+//                pengaduan.setMelaporKepada(cursor.getString(cursor.getColumnIndexOrThrow(MELAPORKEPADA)));
+//                pengaduan.setAlamatTerlapor(cursor.getString(cursor.getColumnIndexOrThrow(ALAMATTERLAPOR)));
+//                pengaduan.setKotaMelapor(cursor.getString(cursor.getColumnIndexOrThrow(KOTAMELAPOR)));
+//                pengaduan.setHarapanPelapor(cursor.getString(cursor.getColumnIndexOrThrow(HARAPANPELAPOR)));
 
                 arrayList.add(pengaduan);
                 cursor.moveToNext();
@@ -111,28 +111,28 @@ public class PengaduanHelper {
         return arrayList;
     }
 
-    public long insertPengaduan(Pengaduan note) {
+    public long insertPengaduan(Pengaduan pengaduan) {
         ContentValues args = new ContentValues();
 
-        args.put(TGLSKRG, note.getTglSkrg());
-        args.put(NAMAPELAPOR, note.getNamapelapor());
-        args.put(JENISKELAMIN, note.getJeniskelamin());
-        args.put(KEPENDUDUKAN, note.getKependudukan());
-        args.put(NOMORIDENTITAS, note.getNomoridentitas());
-        args.put(EMAIL, note.getEmail());
-        args.put(NOTLP, note.getNotlp());
-        args.put(STATUS, note.getStatus());
-        args.put(ALAMAT, note.getAlamat());
-        args.put(KOTA, note.getKota());
-        args.put(KLASIFIKASI, note.getKlasifikasi());
-        args.put(NAMAINSTANSI, note.getNamaInstansiTerlapor());
-        args.put(SUDAHMELAPOR, note.getSudahMelaporkan());
-        args.put(TGLUPAYALAPOR, note.getTglUpayaLapor());
-        args.put(LAPORMELALUI, note.getLaporMelalui());
-        args.put(MELAPORKEPADA, note.getMelaporKepada());
-        args.put(ALAMATTERLAPOR, note.getAlamatTerlapor());
-        args.put(KOTAMELAPOR, note.getKotaMelapor());
-        args.put(HARAPANPELAPOR, note.getHarapanPelapor());
+        args.put(TGLSKRG, pengaduan.getTglSkrg());
+        args.put(NAMAPELAPOR, pengaduan.getNamapelapor());
+       // args.put(JENISKELAMIN, note.getJeniskelamin());
+        //args.put(KEPENDUDUKAN, note.getKependudukan());
+//        args.put(NOMORIDENTITAS, pengaduan.getNomoridentitas());
+//        args.put(EMAIL, pengaduan.getEmail());
+//        args.put(NOTLP, pengaduan.getNotlp());
+//        args.put(STATUS, pengaduan.getStatus());
+//        args.put(ALAMAT, pengaduan.getAlamat());
+//        args.put(KOTA, pengaduan.getKota());
+//        args.put(KLASIFIKASI, pengaduan.getKlasifikasi());
+        args.put(NAMAINSTANSI, pengaduan.getNamaInstansiTerlapor());
+        //args.put(SUDAHMELAPOR, note.getSudahMelaporkan());
+//        args.put(TGLUPAYALAPOR, pengaduan.getTglUpayaLapor());
+//        args.put(LAPORMELALUI, pengaduan.getLaporMelalui());
+//        args.put(MELAPORKEPADA, pengaduan.getMelaporKepada());
+//        args.put(ALAMATTERLAPOR, pengaduan.getAlamatTerlapor());
+//        args.put(KOTAMELAPOR, pengaduan.getKotaMelapor());
+//        args.put(HARAPANPELAPOR, pengaduan.getHarapanPelapor());
         return database.insert(DATABASE_TABLE, null, args);
     }
 
